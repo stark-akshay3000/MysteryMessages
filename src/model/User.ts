@@ -1,5 +1,7 @@
 import mongoose , {Schema , Document} from "mongoose"
+import Email from "next-auth/providers/email"
 import { Content } from "next/font/google"
+import { string } from "zod"
 
 export interface Message extends Document{
     content:string,
@@ -38,9 +40,10 @@ const UserSchema : Schema<User> = new Schema({
     },
     email:{
         type:String,
-        required:[true,"username is required"],
+        required:[true,"email is required"],
         unique:true,
-        match : [/ ^[^@]+@[^@]+\.[^@]+$/,'please use a valid email address']
+        // match : [/^\S+@\S+\.\S+$/
+        // ,'please use a valid email address']
 
         
     },

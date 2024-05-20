@@ -7,10 +7,12 @@
 .yarn/install-state.gz
 .postcss.config.mjs
 .env
-/tailwind.config.ts
-/tsconfig.json
+tailwind.config.ts
+tsconfig.json
 .eslintrc.json
-/next.config.mjs
+next.config.mjs
+.eslintrc
+
 
 # testing
 /coverage
